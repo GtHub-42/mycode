@@ -1,13 +1,13 @@
 ---
 - name: Using cli_command agnostic modules
-  hosts: arista_switches
+  hosts: cisco_switches
   gather_facts: false
   connection: network_cli    # required for ansible to use CLI over SSH 
   become: yes                # run with privilege
   become_method: enable      # use in place of "sudo"
 
   vars:
-    ansible_ssh_pass: alta3
+    ansible_ssh_pass
 
   tasks:
     # this is a network "agnostic" module, in that it should work on every Ansible supported
